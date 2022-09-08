@@ -1,4 +1,4 @@
-package org.pophealth.util;
+package org.admitintel.util;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,9 +15,7 @@ public class ExcelToDrl {
 // mention the local directory path where your excel is kept
 // you can take any decision table (excel sheet) for testing
 
-            is= new FileInputStream("/projects/quarkus/population-health/decision-services/src/main/resources/org/pophealth/rules/PopHealthRules.xls");
-
-//            is= new FileInputStream("/projects/quarkus/population-health/decision-services/src/main/resources/org.pophealth.alert/Alerts.xls");
+            is= new FileInputStream("/projects/admit-intel/admission-intelligence-decision-services/src/main/resources/org/admitintel/rules/AdmissionIntelligenceRules.xls");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

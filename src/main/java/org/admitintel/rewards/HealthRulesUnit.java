@@ -1,9 +1,9 @@
-package org.pophealth.rewards;
+package org.admitintel.rewards;
 
 import org.kie.kogito.rules.DataSource;
 import org.kie.kogito.rules.DataStore;
 import org.kie.kogito.rules.RuleUnitData;
-import org.pophealth.model.HealthData;
+import org.admitintel.model.HealthData;
 
 
 public class HealthRulesUnit implements RuleUnitData {

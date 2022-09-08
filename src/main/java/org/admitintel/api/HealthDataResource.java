@@ -1,4 +1,4 @@
-package org.pophealth.api;
+package org.admitintel.api;
 
 import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
@@ -10,10 +10,10 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
-import org.pophealth.client.AlertService;
-import org.pophealth.client.RewardService;
-import org.pophealth.model.HealthData;
-import org.pophealth.rewards.HealthDataService;
+import org.admitintel.client.AlertService;
+import org.admitintel.client.RewardService;
+import org.admitintel.model.HealthData;
+import org.admitintel.rewards.HealthDataService;
 
 @Path("/healthRules")
 

@@ -1,11 +1,11 @@
-package org.pophealth.rewards;
+package org.admitintel.rewards;
 
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import org.kie.api.runtime.KieSession;
 import org.kie.kogito.rules.KieRuntimeBuilder;
-import org.pophealth.model.HealthData;
+import org.admitintel.model.HealthData;
 
 @ApplicationScoped
 public class HealthDataService {

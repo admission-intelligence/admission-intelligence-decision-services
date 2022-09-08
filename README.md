@@ -1,13 +1,15 @@
-# Serverless Decision Services for Population Health
-Serverless decision services using Quarkus and Kogito. 
+# Decision Service for Admission Intelligence
 
-See (https://popluation-health.github.io/pop-health-docs/) for getting started and documentation.
 
+See (https://admission-intelligence.github.io/admission-intelligence-docs/) for getting started and documentation.
+
+
+## Technical Details
 Run locally with: 
 `mvn clean compile quarkus:dev`
 
 
-Note: If you want to build a native image from thise you need to remove this from the pom:
+Note: If you want to build a native image from this you need to remove this from the pom:
 
 ```
 <configuration>

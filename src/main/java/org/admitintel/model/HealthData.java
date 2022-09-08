@@ -1,4 +1,4 @@
-package org.pophealth.model;
+package org.admitintel.model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

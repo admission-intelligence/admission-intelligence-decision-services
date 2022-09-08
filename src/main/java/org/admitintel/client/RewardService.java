@@ -1,20 +1,20 @@
-package org.pophealth.client;
+package org.admitintel.client;
 
+import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
-import org.pophealth.model.Alert;
+import org.admitintel.model.Reward;
 
 @RegisterRestClient
-public interface AlertService {
+public interface RewardService {
 
     @POST
-    @Path("/alert")
+    @Path("/rewards")
     @Consumes(MediaType.APPLICATION_JSON)
-    void issueAlert(Alert alert);
-
-
-
+    @Produces(MediaType.APPLICATION_JSON)
+    void issueReward(List<Reward> reward);
 }
