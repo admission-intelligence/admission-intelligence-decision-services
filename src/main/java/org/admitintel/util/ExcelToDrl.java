@@ -15,7 +15,7 @@ public class ExcelToDrl {
 // mention the local directory path where your excel is kept
 // you can take any decision table (excel sheet) for testing
 
-            is= new FileInputStream("/projects/admit-intel/admission-intelligence-decision-services/src/main/resources/org/admitintel/rules/AdmissionIntelligenceRules.xls");
+            is= new FileInputStream("/Users/josephwhite/projects/admit-intel/admission-intelligence-decision-services/src/main/resources/org/admitintel/rules/AdmissionIntelligenceRules.xls");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

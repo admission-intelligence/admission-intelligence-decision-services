@@ -11,7 +11,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.admitintel.client.AlertService;
-import org.admitintel.client.RewardService;
+import org.admitintel.client.OutcomeService;
 import org.admitintel.model.HealthData;
 import org.admitintel.rewards.HealthDataService;
 
@@ -28,7 +28,7 @@ public class HealthDataResource {
 
     @Inject
     @RestClient
-    RewardService rewardService;
+    OutcomeService outcomeService;
 
     @Inject
     @RestClient
@@ -40,18 +40,18 @@ public class HealthDataResource {
         healthService.processRules(data);
 
         data.stream()
-                .filter(val -> !val.getRewards().isEmpty())
-                .forEach(result -> log.info("Rewards "+ result.getRewards()));
+                .filter(val -> !val.getOutcomes().isEmpty())
+                .forEach(result -> log.info("Outcomes "+ result.getOutcomes()));
 
         try {
             for (HealthData healthInstance : data) {
-                if (healthInstance.getRewards() != null) {
-                    rewardService.issueReward(healthInstance.getRewards());
+                if (healthInstance.getOutcomes() != null) {
+                    outcomeService.issueOutcome(healthInstance.getOutcomes());
 
                 }
             }
         }catch(Exception e){
-            log.error("Failed to psot rewards ",e);
+            log.error("Failed to post outcomes ",e);
         }
         data.stream()
                 .filter(val -> !val.getAlerts().isEmpty())
@@ -59,7 +59,7 @@ public class HealthDataResource {
 
         for(HealthData healthInstance : data) {
             if(healthInstance.getAlerts() !=null) {
-                healthInstance.getAlerts().forEach(alert -> alertService.issueAlert(alert));
+                alertService.issueAlerts(healthInstance.getAlerts());
             }
         }
 

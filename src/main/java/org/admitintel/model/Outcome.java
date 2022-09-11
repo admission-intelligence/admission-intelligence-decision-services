@@ -3,13 +3,13 @@ package org.admitintel.model;
 import lombok.Data;
 
 @Data
-public class Alert {
+public class Outcome {
 
     private String alertName;
     private String alertType;
-    private String channels;
-    private String severity;
+    private String recommendedAction;
     private String triggers;
+    private String severity;
     private String category;
 
 }
