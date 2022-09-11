@@ -6,8 +6,9 @@ See (https://admission-intelligence.github.io/admission-intelligence-docs/) for 
 
 ## Technical Details
 Run locally with: 
-`mvn clean compile quarkus:dev`
-
+```
+mvn clean compile quarkus:dev -Dquarkus.http.port=8081
+```
 
 Note: If you want to build a native image from this you need to remove this from the pom:
 
